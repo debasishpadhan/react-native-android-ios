@@ -6,6 +6,6 @@ workflows:
             - name: Build Android App Bundle
               working_directory: android
               script: |
-                ./gradlew bundleRelease
+                chmod +x gradlew && ./gradlew assembleRelease
         artifacts:
             - build/**/outputs/bundle/**/*.aab
