@@ -15,6 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
+      - name: Install java 8
+        run: |
+          apt-get install default-jre -y
       - name: Install npm dependencies
         run: |
           npm install
